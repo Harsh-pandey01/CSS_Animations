@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader-container ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.loader-container ul li{
+    width: 1rem;
+    background-color: white;
+    height: 1.8rem;
+    animation: loader-animation infinite alternate 1s;
+    animation-delay:calc(var(--i)*0.1s)
+}
+
+
+@keyframes loader-animation {
+    0%{
+        height: 0;
+    }
+    50%{
+        height: 2rem;
+    }
+    100%{
+        height: 0;
+    }
+}
